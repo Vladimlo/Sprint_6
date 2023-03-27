@@ -28,7 +28,7 @@ public class FelineTest {
     @Test
     public void getKittensNoParamTest() {
         feline.getKittens();
-        Mockito.verify(feline, Mockito.times(1)).getKittens(Mockito.anyInt());
+        Mockito.verify(feline, Mockito.times(1)).getKittens(1);
     }
 
     @Test

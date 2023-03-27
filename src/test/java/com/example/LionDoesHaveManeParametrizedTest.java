@@ -10,12 +10,12 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class LionDoesHaveManeParametrizedTest {
     private final boolean expectedResult;
-    private final Lion lionSpy;
+    private final Lion lion;
 
     public LionDoesHaveManeParametrizedTest(String gender, boolean expectedResult) throws Exception {
         this.expectedResult = expectedResult;
         Feline feline = Mockito.mock(Feline.class);
-        this.lionSpy = Mockito.spy(new Lion(gender, feline));
+        this.lion = new Lion(gender, feline);
     }
 
     @Parameterized.Parameters
@@ -28,6 +28,6 @@ public class LionDoesHaveManeParametrizedTest {
 
     @Test
     public void doesHaveManeDataTest() throws Exception {
-        assertEquals(expectedResult, lionSpy.doesHaveMane());
+        assertEquals(expectedResult, lion.doesHaveMane());
     }
 }

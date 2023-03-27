@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 public class FelineGetFoodTest {
     private final String animalKind;
     private final List<String> expectedList;
-    Feline felineSpy = Mockito.spy();
+    Feline felineSpy = new Feline();
 
     public FelineGetFoodTest(String animalKind, List<String> expectedList) {
         this.animalKind = animalKind;

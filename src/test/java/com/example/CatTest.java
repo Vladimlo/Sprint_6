@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class CatTest {
 
     Feline predator = Mockito.mock();
-    Cat cat = Mockito.spy(new Cat(predator));
+    Cat cat = new Cat(predator);
 
     @Test
     public void getFoodTest() throws Exception {
